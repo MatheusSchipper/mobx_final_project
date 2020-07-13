@@ -52,7 +52,9 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: TextField(
-          onChanged: controller.setFilter,
+          onChanged: (value) {
+            controller.setFilter(value);
+          },
           decoration: InputDecoration(hintText: "Pesquisa..."),
         ),
         actions: <Widget>[
